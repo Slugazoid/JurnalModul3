@@ -28,12 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            button1 = new Button();
+            SuspendLayout();
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(76, 110);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(127, 28);
+            comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(76, 168);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(127, 28);
+            comboBox2.TabIndex = 1;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(262, 111);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(272, 27);
+            textBox1.TabIndex = 2;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(262, 169);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(272, 27);
+            textBox2.TabIndex = 3;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(603, 111);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 4;
+            button1.Text = "Convert";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Button button1;
     }
 }
